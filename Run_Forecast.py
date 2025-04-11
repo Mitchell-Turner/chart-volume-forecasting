@@ -6,7 +6,7 @@ This script calculates forecasted market volumes based on historical data.
 It uses a specialized algorithm that accounts for membership growth and seasonal patterns.
 This is the second script in the process, after Market_Volume_Actuals.py has been run.
 
-Author: Your Name
+Author: Mitchell Turner
 Date: April 2025
 """
 
