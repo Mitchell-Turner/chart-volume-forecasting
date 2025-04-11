@@ -6,7 +6,7 @@ This script processes Excel files from project directories and creates a summary
 of actual chart volumes by state. This is the first script in the pipeline,
 generating the input for the Market Volume Forecast script.
 
-Author: Your Name
+Author: Mitchell Turner
 Date: April 2025
 """
 
