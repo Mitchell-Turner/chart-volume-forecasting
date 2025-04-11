@@ -43,23 +43,30 @@ The second script that builds upon the actuals to create forecasts:
 /
 ├── Chart_Actuals.py            # First script (processes raw data)
 ├── Market_Volume_Forecast.py   # Second script (generates forecasts)
+├── README.md                   # Project documentation
+└── output/                     # Generated output files (created by scripts)
+    ├── Market_Volume_Actuals.xlsx     # Output from first script
+    ├── Market_Volume_Forecast.xlsx    # Output from second script
+    └── forecast_calculation.log       # Logging information
+```
+
+## Required Data Structure (Not Included in Repository)
+
+To use this system, you'll need to set up the following data structure:
+
+```
+/
 ├── Project2023/                # Raw data folders organized by project year
 │   └── *.xlsx                  # Monthly data files (format: YYYY-MM*.xlsx)
 ├── Project2024/
 │   └── *.xlsx
 ├── Project2025/
 │   └── *.xlsx
-├── MEM_REF/
+└── MEM_REF/
 │   └── MP_MEM_REF.xlsx         # Membership reference data
-└── output/                     # Generated output files
-    ├── Market_Volume_Actuals.xlsx     # Output from first script
-    ├── Market_Volume_Forecast.xlsx    # Output from second script
-    └── forecast_calculation.log       # Logging information
 ```
 
-## Required Data Format
-
-### Input Excel Files
+### Input Excel Files Format
 
 - Monthly data files in project directories must have:
   - Filename starting with YYYY-MM format
@@ -72,6 +79,16 @@ The second script that builds upon the actuals to create forecasts:
 - Columns should be formatted as year-month (e.g., "2023M08")
 
 ## Usage Instructions
+
+### Setting Up (Before First Use)
+
+1. Create the necessary directories for your data:
+   - `Project2023/`, `Project2024/`, `Project2025/`
+   - `MEM_REF/`
+
+2. Place your data files in the appropriate directories:
+   - Monthly Excel files (YYYY-MM*.xlsx) in the project directories
+   - Membership reference file (MP_MEM_REF.xlsx) in the MEM_REF directory
 
 ### Step 1: Process Actual Data
 
@@ -128,7 +145,10 @@ Where:
 pip install pandas numpy xlsxwriter matplotlib
 ```
 
+## Note on Data
+
+This repository contains only the processing and forecasting scripts. You must provide your own data files in the format described above. No sample data is included due to confidentiality requirements.
+
 ## Author
 
-Your Name  
-April 2025
+Your Name
